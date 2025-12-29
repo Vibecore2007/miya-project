@@ -1,3 +1,12 @@
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/",
+    "@pixiv/three-vrm": "https://cdn.jsdelivr.net/npm/@pixiv/three-vrm@3/lib/three-vrm.module.min.js"
+  }
+}
+</script>
 import { createBrain } from "./brain.js";
 
 const $ = (id) => document.getElementById(id);
