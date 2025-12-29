@@ -163,8 +163,8 @@ async function applyAutoDevices() {
   } // register() creates/updates a registration for the given script URL [web:686]
 
   setupSpeech();
-  await initFace({ modelPath: "./mp_models/face_landmarker.task" });
-
+  await initFace({ modelPath: "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task" });
+  
   $("loadBrainBtn").onclick = loadBrain;
   $("micOnBtn").onclick = async () => { setMicAuto(true); await applyAutoDevices(); };
   $("micOffBtn").onclick = async () => { setMicAuto(false); await applyAutoDevices(); };
