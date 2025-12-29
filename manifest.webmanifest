@@ -1,1 +1,9 @@
-
+{
+  "name": "Miya",
+  "short_name": "Miya",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b0b10",
+  "theme_color": "#0b0b10",
+  "icons": []
+}
