@@ -1,11 +1,13 @@
-const CACHE = "miya-cache-v1";
+const CACHE = "miya-final-v1";
 const ASSETS = [
   "./",
   "./index.html",
   "./app.js",
   "./brain.js",
   "./brain.worker.js",
-  "./manifest.webmanifest"
+  "./face.js",
+  "./manifest.webmanifest",
+  "./mp_models/face_landmarker.task"
 ];
 
 self.addEventListener("install", (e) => {
@@ -13,5 +15,5 @@ self.addEventListener("install", (e) => {
 });
 
 self.addEventListener("fetch", (e) => {
-  e.respondWith(caches.match(e.request).then((hit) => hit || fetch(e.request)));
+  e.respondWith(caches.match(e.request).then((r) => r || fetch(e.request)));
 });
