@@ -1,1 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miya (Voice + Camera)</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <style>
+    body { font-family: system-ui, Arial; background:#0b0b10; color:#eaeaf2; margin:16px; }
+    button { padding:10px 12px; margin:6px 6px 6px 0; border-radius:12px; border:0; }
+    #subtitle { margin-top:12px; padding:12px; background:#151524; border-radius:14px; min-height:48px; }
+    #camPreview { width:180px; height:135px; background:#111; border-radius:14px; margin-top:10px; }
+    .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  </style>
+</head>
+<body>
+  <h2>Miya</h2>
 
+  <div class="row">
+    <button id="enableBtn">Enable (first time)</button>
+    <button id="loadBrainBtn">Load brain</button>
+  </div>
+
+  <div class="row">
+    <button id="micBtn">Auto Mic ON</button>
+    <button id="stopMicBtn" disabled>Auto Mic OFF</button>
+
+    <button id="camBtn">Auto Cam ON</button>
+    <button id="stopCamBtn" disabled>Auto Cam OFF</button>
+  </div>
+
+  <video id="camPreview" autoplay playsinline muted></video>
+
+  <div id="subtitle">Ready.</div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
